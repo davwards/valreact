@@ -37,5 +37,10 @@ module.exports = {
   watch: {
     src: 'src/**/*.*',
     tasks: ['build']
-  }
+  },
+  images: {
+    src: "img/**/*",
+    tasks: ['images'],
+    dest: dest
+  },
 };

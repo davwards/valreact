@@ -1,0 +1,40 @@
+body {
+  font-family: "Roboto", "Helvetica", sans-serif;
+  background: #FAFAFA;
+}
+
+.navbar {
+  background: white;
+
+  .navbar-nav .nav-link {
+    line-height: 66px;
+  }
+}
+
+.navbar-brand {
+  height: 80px;
+  img {
+    height: 100%;
+  }
+}
+
+.main-content {
+  padding: 50px 0;
+}
+
+.input-group {
+  &.has-success {
+    input {
+      background: rgba(green, .10);
+    }
+  }
+  &.has-error {
+    input {
+      background: rgba(red, .10);
+    }
+  }
+}
+
+.input-feedback {
+  margin-top: 10px;
+}

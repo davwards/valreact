@@ -11,12 +11,23 @@ export default React.createClass({
     ActionCreator.validateInput();
   },
 
+  validClass() {
+    console.log(this.props.validity);
+    if( this.props.validity === null ) return 'input-group';
+
+    if(this.props.validity) {
+      return 'input-group has-success';
+    } else {
+      return 'input-group has-error';
+    }
+  },
+
   render() {
     return (
-      <div className="input-group">
-        <input onChange={this.onChange} type="text" className="form-control" placeholder="Enter some text..."/>
+      <div className={this.validClass()}>
+        <input onChange={this.onChange} type="text" className="form-control" placeholder="Enter a maximum of 10 characters"/>
         <span className="input-group-btn">
-          <button onClick={this.validateInput} className="btn btn-default" type="button">Validate</button>
+          <button onClick={this.validateInput} className="btn btn-primary" type="button">Validate</button>
         </span>
       </div>
     );
